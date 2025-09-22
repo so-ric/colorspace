@@ -1,7 +1,7 @@
 {
-  "name": "colorspace",
+  "name": "@so-ric/colorspace",
   "version": "1.1.4",
-  "description": "Generate HEX colors for a given namespace.",
+  "description": "Generate HEX colors for a given namespace using color v5",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -16,15 +16,15 @@
     "space",
     "colorspace"
   ],
-  "author": "Arnout Kazemier",
+  "author": "so-ric",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/3rd-Eden/colorspace/issues"
+    "url": "https://github.com/so-ric/colorspace/issues"
   },
-  "homepage": "https://github.com/3rd-Eden/colorspace",
+  "homepage": "https://github.com/so-ric/colorspace",
   "repository": {
     "type": "git",
-    "url": "https://github.com/3rd-Eden/colorspace"
+    "url": "https://github.com/so-ric/colorspace"
   },
   "dependencies": {
     "color": "^5.0.2",
