@@ -1,3 +1,6 @@
+Based on Arnout Kazemier's https://github.com/3rd-Eden/colorspace, only difference is updated packages to remove security vulnerbilities.
+All credit goes to him.
+
 # colorspace
 
 Colorspace is a simple module which generates HEX color codes for namespaces.
@@ -11,7 +14,7 @@ The module is released in the public npm registry and can be installed by
 running:
 
 ```
-npm install --save colorspace
+npm install --save @so-ric/colorspace
 ```
 
 ## Usage
@@ -21,7 +24,7 @@ We assume that you've already required the module using the following code:
 ```js
 'use strict';
 
-var colorspace = require('colorspace');
+var colorspace = require('@so-ric/colorspace');
 ```
 
 The returned function accepts 2 arguments:
