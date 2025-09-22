@@ -1,7 +1,7 @@
 'use strict';
 
-var color = require('color')
-  , hex = require('text-hex');
+import color from 'color';
+import hex from 'text-hex';
 
 /**
  * Generate a color for a given name. But be reasonably smart about it by
@@ -12,13 +12,13 @@ var color = require('color')
  * @param {string} [delimiter] The delimiter
  * @returns {string} color
  */
-module.exports = function colorspace(namespace, delimiter) {
-  var split = namespace.split(delimiter || ':');
-  var base = hex(split[0]);
+export default function colorspace(namespace, delimiter) {
+  const split = namespace.split(delimiter || ':');
+  let base = hex(split[0]);
 
   if (!split.length) return base;
 
-  for (var i = 0, l = split.length - 1; i < l; i++) {
+  for (let i = 0, l = split.length - 1; i < l; i++) {
     base = color(base)
     .mix(color(hex(split[i + 1])))
     .saturate(1)

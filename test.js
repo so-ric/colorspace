@@ -1,7 +1,8 @@
-describe('colorspace', function () {
-  var colorspace = require('./');
-  var assume = require('assume');
+import { describe, it } from "mocha";
+import assume from "assume";
+import colorspace from "./index.js";
 
+describe("colorspace", function () {
   it('returns a consistent color for a given name', function () {
     assume(colorspace('bigpipe')).equals('#20f95a');
     assume(colorspace('bigpipe')).equals('#20f95a');
