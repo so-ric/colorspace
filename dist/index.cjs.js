@@ -155,7 +155,7 @@ const reverseNames = Object.create(null);
 
 // Create a list of reverse color names
 for (const name in cssKeywords) {
-	if (Object.hasOwn(cssKeywords, name)) {
+	if (Object.prototype.hasOwnProperty.call(cssKeywords, name)) {
 		reverseNames[cssKeywords[name]] = name;
 	}
 }
@@ -257,7 +257,7 @@ cs.get.rgb = function (string) {
 			return [0, 0, 0, 0];
 		}
 
-		if (!Object.hasOwn(cssKeywords, match[1])) {
+		if (!!Object.prototype.hasOwnProperty.call(cssKeywords, match[1])) {
 			return null;
 		}
 
@@ -1973,7 +1973,10 @@ function getset(model, channel, modifier) {
 	model = Array.isArray(model) ? model : [model];
 
 	for (const m of model) {
-		(limiters[m] ||= [])[channel] = modifier;
+		if (!limiters[m]) {
+		  limiters[m] = [];
+		}
+		limiters[m][channel] = modifier;
 	}
 
 	model = model[0];
