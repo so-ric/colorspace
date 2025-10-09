@@ -1,6 +1,7 @@
 import { describe, it } from "mocha";
 import assume from "assume";
-import colorspace from "./index.js";
+import * as colorspaceModule from "./dist/index.cjs";
+const colorspace = colorspaceModule.default;
 
 describe("colorspace", function () {
   it('returns a consistent color for a given name', function () {
